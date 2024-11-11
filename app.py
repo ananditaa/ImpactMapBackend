@@ -20,7 +20,7 @@ jwt = JWTManager(app)
 client = MongoClient(os.getenv("MONGODB_URI"))
 db = client['ImpactMapDB']  # Replace with your database name
 
-CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
+CORS(app, resources={r"/*": {"origins": "https://impactmapfrontend.onrender.com/"}})
 
 # Register the authentication routes
 auth_routes = register_auth_routes(bcrypt, jwt)
